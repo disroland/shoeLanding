@@ -13,7 +13,7 @@ header {
 	width: 100%;
 	margin: 0%;
 	min-height: 120vh;
-	height: 100%;
+	overflow: auto;
 	padding: 50px 50px;
 	background-color: $bgColor;
 	background-image: url(../img/bg_scratches.png);
@@ -22,6 +22,9 @@ header {
 	background-attachment: fixed;
 	position: relative;
 	z-index: 3;
+	@media (orientation: portrait){
+		min-height: 60vh;
+	}
 }
 nav{
 	display: flex;
