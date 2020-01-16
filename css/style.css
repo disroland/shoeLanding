@@ -5,7 +5,8 @@ body {
   margin: 0 auto;
   padding: 0;
   max-width: 1920px;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-family: 'Josefin Sans', sans-serif; }
 
 header {
   width: 100%;
@@ -28,6 +29,85 @@ nav {
   display: flex;
   align-items: center;
   overflow-x: hidden; }
+
+.cont {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 20px; }
+
+.wrap {
+  position: relative;
+  width: 640px;
+  min-height: 480px;
+  perspective: 1000px; }
+
+.wrap div {
+  position: absolute;
+  width: 640px;
+  min-height: 480px;
+  opacity: 0;
+  display: none;
+  /*	object-fit: cover;
+*/ }
+
+.slide-buttons {
+  min-width: 640px;
+  display: flex;
+  height: 50px;
+  margin-bottom: 50px;
+  margin-left: 5px; }
+
+button {
+  width: 50%;
+  height: 100%;
+  background-color: #00b2bb;
+  border-radius: 10px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.2rem; }
+
+div img {
+  width: 100%;
+  height: auto;
+  transition: 1s; }
+
+.wrap .center {
+  display: flex;
+  opacity: 1;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 640px;
+  transition: 1s;
+  justify-content: center;
+  align-items: flex-start; }
+
+.wrap .left {
+  display: block;
+  opacity: .5;
+  top: 0;
+  left: 0;
+  transform: translateX(-200px);
+  top: 80px;
+  z-index: 5;
+  width: 100px;
+  transition: .3s; }
+
+.wrap .right {
+  display: block;
+  opacity: .5;
+  top: 0;
+  top: 80px;
+  left: 0;
+  transform: translateX(740px);
+  z-index: 5;
+  width: 100px;
+  transition: .3s; }
 
 .header-bg1 {
   width: 100%;
@@ -56,6 +136,7 @@ nav {
     text-shadow: transparent 1px 1px 3px;
     transition: .4s; }
     .menu li:hover {
+      cursor: pointer;
       text-shadow: black 1px 1px 3px;
       color: skyblue; }
 
@@ -101,7 +182,7 @@ nav {
       .header-info h1 {
         margin-bottom: 50px;
         font-size: 2rem; } }
-  .header-info a {
+  .header-info .h-btn {
     display: inline-block;
     width: 150px;
     height: 3rem;
@@ -114,7 +195,7 @@ nav {
     color: white;
     transition: background-color .6s;
     text-transform: uppercase; }
-    .header-info a:hover {
+    .header-info .h-btn:hover {
       border: 1px solid transparent;
       background-color: #22f4ff;
       text-shadow: gray 1px 1px 1px; }
@@ -124,6 +205,10 @@ nav {
   justify-content: flex-start;
   align-items: flex-start;
   object-fit: cover; }
+  .header-picture:hover img {
+    animation-name: hide;
+    animation-duration: 3s;
+    animation-iteration-count: 1; }
   .header-picture img {
     position: relative;
     width: 90%;
@@ -138,10 +223,6 @@ nav {
       position: absolute;
       bottom: 0;
       left: 0; }
-    .header-picture img:hover {
-      animation-name: hide;
-      animation-duration: 3s;
-      animation-iteration-count: 1; }
     @media screen and (max-width: 900px) {
       .header-picture img {
         transform: rotate(-20deg); } }
@@ -149,6 +230,7 @@ nav {
 .section1 {
   width: 100%;
   min-height: 100%;
+  height: 100%;
   background-image: url(../img/shape1.png);
   background-size: cover;
   background-position: cover;
@@ -169,9 +251,10 @@ nav {
   background-repeat: no-repeat;
   position: absolute;
   width: 100%;
-  opacity: 0.8;
-  max-height: 110%;
+  opacity: 0.7;
+  max-height: 100%;
   z-index: 15;
+  top: 10%;
   height: 100%; }
 
 .s2-content {
@@ -181,9 +264,10 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 20%; }
+  padding-top: 20%;
+  max-height: 80%; }
   .s2-content img {
-    width: 50%; }
+    width: 90%; }
   .s2-content a {
     width: 150px;
     height: 3rem;
@@ -204,6 +288,31 @@ nav {
       border: 1px solid transparent;
       background-color: #22f4ff;
       text-shadow: gray 1px 1px 1px; }
+
+.gallery {
+  width: 100%;
+  height: 100vh;
+  background-color: #0089a0;
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.gallery-title {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  width: 100%;
+  height: 10%;
+  margin-bottom: 5%; }
+
+.gallery-content {
+  background-color: #fff;
+  height: 75%;
+  width: 90%;
+  border-radius: 15px; }
 
 .active {
   transform: translateX(0px); }
