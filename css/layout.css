@@ -32,6 +32,9 @@
 
 .ba-col-3 {
   width: 25%; }
+  @media (orientation: portrait) {
+    .ba-col-3 {
+      width: 50%; } }
 
 .ba-col-4 {
   width: 33.33333%; }
