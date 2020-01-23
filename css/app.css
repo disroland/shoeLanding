@@ -803,7 +803,9 @@ footer {
   width: 25%; }
   @media (orientation: portrait) {
     .ba-col-3 {
-      width: 50%; } }
+      width: 50%; }
+      .ba-col-3 .card {
+        min-height: 33vh !important; } }
 
 .ba-col-4 {
   width: 33.33333%; }
