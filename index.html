@@ -3,8 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Shoe Shop</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="img/logo1.png">
+	<link rel="stylesheet" href="css/app.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
+
 
 </head>
 <body>
@@ -13,7 +16,7 @@
 		<div class="header-bg1">
 			<div class="header-bg2">
 				<div class="header-top">
-					<div class="logo">
+					<div class="logo wow slideInLeft">
 						<img src="img/nike.png" alt="nike_logo">
 					</div>
 					<nav>
@@ -37,13 +40,13 @@
 
 			<div class="header-content">
 				<div class="header-info">
-					<h1 class="header-title">
+					<h1 class="header-title wow slideInDown">
 						Awesome <br>
 						NIKE shoes!
 					</h1>
 					<div class="buttons">
-						<a href="#" class="h-btn explore"> explore</a>
-						<a href="#" class="h-btn add"> add to cart</a>
+						<a href="#" class="h-btn explore wow slideInLeft"> explore</a>
+						<a href="#" class="h-btn add wow slideInRight"> add to cart</a>
 					</div>
 				</div>
 				<div class="header-picture">
@@ -53,7 +56,7 @@
 		</div>
 	</header>
 	<section class="section1">
-		<div class="bg-wrap">
+		<div class="bg-wrap wow">
 			<!-- <svg 
 			xmlns="http://www.w3.org/2000/svg"
 			xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -78,7 +81,9 @@
 			</g>
 		</svg> -->
 	</div>
+
 	<div class="s2-content">
+		<h2>preview</h2>
 		<div class="cont">
 		<div class="slide-buttons">
 			<button id="previous">previous</button>
@@ -90,8 +95,10 @@
 			<div><img src="img/shoe3.png" alt="nike"></div>
 			<div><img src="img/shoe4.png" alt="nike"></div>
 			<div><img src="img/shoe5.png" alt="nike"></div>
+			<div><img src="img/shoe6.png" alt="nike"></div>
 			<div><img src="img/shoe7.png" alt="nike"></div>
 		</div>
+
 	</div>
 		<!-- <img src="img/shoe2.png" alt="trainers">
 		<a href="#" class="button">buy now</a> -->
@@ -103,11 +110,216 @@
 		<h2>gallery</h2>
 	</div>
 	<div class="gallery-content">
-		
+		<div class="ba-row">
+			<div class="ba-col-3 ba-col-sm-6">
+				<div class="card">
+					<div class="pict">
+						<img src="img/shoe1.png" alt="nike">
+					</div>
+					<div class="card-info">
+
+					<div class="model-name">
+						<p>model_1</p>
+					</div>
+					<div class="size">
+						<span>Size:</span>
+						<select name="size" id="size">
+							<option value="41">41</option>
+							<option value="42">42</option>
+							<option value="43">43</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			</div>
+
+			<div class="ba-col-3 ba-col-sm-6">
+				<div class="card">
+					<div class="pict">
+						<img src="img/shoe2.png" alt="nike">
+					</div>
+					<div class="card-info">
+
+					<div class="model-name">
+						<p>model_2</p>
+					</div>
+					<div class="size">
+						<span>Size:</span>
+						<select name="size" id="size">
+							<option value="41">41</option>
+							<option value="42">42</option>
+							<option value="43">43</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			</div>
+
+			<div class="ba-col-3 ba-col-sm-6">
+				<div class="card">
+					<div class="pict">
+						<img src="img/shoe3.png" alt="nike">
+					</div>
+					<div class="card-info">
+
+					<div class="model-name">
+						<p>model_3</p>
+					</div>
+					<div class="size">
+						<span>Size:</span>
+						<select name="size" id="size">
+							<option value="41">41</option>
+							<option value="42">42</option>
+							<option value="43">43</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			</div>
+
+			<div class="ba-col-3 ba-col-sm-6">
+				<div class="card">
+					<div class="pict">
+						<img src="img/shoe4.png" alt="nike">
+					</div>
+					<div class="card-info">
+
+					<div class="model-name">
+						<p>model_4</p>
+					</div>
+					<div class="size">
+						<span>Size:</span>
+						<select name="size" id="size">
+							<option value="41">41</option>
+							<option value="42">42</option>
+							<option value="43">43</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			</div>
+
+
+
+			<div class="ba-col-3 ba-col-sm-6">
+				<div class="card">
+					<div class="pict">
+						<img src="img/shoe5.png" alt="nike">
+					</div>
+					<div class="card-info">
+
+					<div class="model-name">
+						<p>model_5</p>
+					</div>
+					<div class="size">
+						<span>Size:</span>
+						<select name="size" id="size">
+							<option value="41">41</option>
+							<option value="42">42</option>
+							<option value="43">43</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			</div>
+
+			<div class="ba-col-3 ba-col-sm-6">
+				<div class="card">
+					<div class="pict">
+						<img src="img/shoe6.png" alt="nike">
+					</div>
+					<div class="card-info">
+
+					<div class="model-name">
+						<p>model_6</p>
+					</div>
+					<div class="size">
+						<span>Size:</span>
+						<select name="size" id="size">
+							<option value="41">41</option>
+							<option value="42">42</option>
+							<option value="43">43</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			</div>
+
+			<div class="ba-col-3 ba-col-sm-6">
+				<div class="card">
+					<div class="pict">
+						<img src="img/shoe7.png" alt="nike">
+					</div>
+					<div class="card-info">
+
+					<div class="model-name">
+						<p>model_7</p>
+					</div>
+					<div class="size">
+						<span>Size:</span>
+						<select name="size" id="size">
+							<option value="41">41</option>
+							<option value="42">42</option>
+							<option value="43">43</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			</div>
+
+			<div class="ba-col-3 ba-col-sm-6">
+				<div class="card">
+					<div class="pict">
+						<img src="img/shoe8.png" alt="nike">
+					</div>
+					<div class="card-info">
+					<div class="model-name">
+						<p>model_8</p>
+					</div>
+					<div class="size">
+						<span>Size:</span>
+						<select name="size" id="size">
+							<option value="41">41</option>
+							<option value="42">42</option>
+							<option value="43">43</option>
+						</select>
+					</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
 	</div>
 </section>
 
+
+<footer>
+	<div class='contact-info'>
+		<p>Phone: <span>000-000-00-00</span></p>
+		<p>Address: <span>Somewhere in newerwhere )</span></p>
+		<p>Working hours: <span>24/7</span></p>
+
+	</div>
+	<div class="map"></div>
+</footer>
+
+
+	<div class="ba-modal">
+        <div class="ba-modal-content">
+            <button class="ba-modal-close" aria-label='ba-close-modal'>x
+                
+            </button>
+            <div class="ba-modal-content-wrapper">
+                
+            </div>
+        </div>
+    </div>
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js" defer></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
 <script src='js/app.js' defer></script>
 </body>
 </html>

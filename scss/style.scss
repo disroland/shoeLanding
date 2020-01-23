@@ -1,4 +1,5 @@
 $bgColor:#00b2bb;
+$darkBlue:#0089a0;
 
 *{
 	box-sizing: border-box
@@ -58,16 +59,15 @@ nav{
 /*	object-fit: cover;
 */}
 .slide-buttons {
-min-width: 640px;
+min-width: 600px;
+width: 90%;
 display: flex;
 height: 50px;
-margin-bottom: 50px;
-margin-left: 5px;
-
-
+margin: 0 auto 40px auto;
+justify-content: space-between;
 }
 button {
-	width: 50%;
+	width: 45%;
 	height: 100%;
 	background-color: $bgColor;
 	border-radius: 10px;
@@ -76,7 +76,7 @@ button {
 	font-size: 1.2rem;
 }
 
-div img {
+.wrap div img {
 	width: 100%;
 	height: auto;
 	transition:1s;
@@ -224,11 +224,11 @@ div img {
 	justify-content: flex-start;
 	align-items: flex-start;
 	object-fit: cover;
-	&:hover img{
-			animation-name: hide;
-			animation-duration: 3s;
-			animation-iteration-count: 1;
-		}
+	// &:hover img{
+	// 		animation-name: hide;
+	// 		animation-duration: 3s;
+	// 		animation-iteration-count: 1;
+	// 	}
 	img {
 		position: relative;
 		width: 90%;
@@ -267,7 +267,7 @@ div img {
 	background-repeat: no-repeat;
 	margin-top: -240px;
 	overflow-x: hidden;
-	overflow-y: visible;
+	// overflow-y: visible;
 	position: relative;
 	z-index: 5;
 	@media screen and (min-width:1768px){
@@ -282,10 +282,12 @@ div img {
 	position: absolute;
 	width: 100%;
 	opacity: 0.7;
-	max-height: 100%;
 	z-index:15;
 	top: 10%;
-	height: 100%;	
+	height: 100%;
+	display: flex;
+	justify-content: center;
+		
 }
 .s2-content{
 	position: relative;
@@ -298,6 +300,14 @@ div img {
 	max-height: 80%;
 	img {
 		width: 90%;
+	}
+	h2{
+		color: $darkBlue;
+	text-shadow: white -1px -1px 4px;
+	padding-top: 1vw;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 3rem;
 	}
 	a{
 		width: 150px;
@@ -327,9 +337,9 @@ div img {
 //gallery
 .gallery{
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	background-color: #0089a0;
-	padding: 1px;
+	padding: 1px 0px 20px 0px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -345,17 +355,132 @@ div img {
 	margin-bottom: 5%;
 }
 .gallery-content{
-	background-color: #fff;
-	height: 75%;
+	background-color: rgba(255,255,255, 0.8);
+	height: 100%;
 	width: 90%;
 	border-radius: 15px;
+	padding: 10px;
+}
+.card{
+	max-width: 100%;
+	min-height: 50vh;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	border:solid 2px $darkBlue;
+	border-radius: 10px 30px;  
+	padding: 10px 5px;
+	margin-bottom: 2%;
+	p{
+		font-size: 1.4rem;
+		color:$darkBlue;
+		text-transform: uppercase;
+		text-shadow: black 1px 1px 1px;
+	}
+	.pict{
+		width: 100%;
+		object-fit: cover;
+		justify-self:flex-start;
+		align-self: flex-start;
+			img{
+			max-width: 100%;
+		}
+	}
+}
+
+//footer
+
+footer {
+	margin: 2vw;
+	width: 96vw;
+	height: 100%;
+	background-color: #fff;
+	min-height: 10vh;
+	border:solid $darkBlue 10px;
+	border-radius: 15px;
+	padding: 10px 20px;
 }
 
 
+//ba modal
+.ba-modal {
+position: fixed;
+left: 0;
+top: 0;
+width: 100vw;
+height: 100vh;
+background-color: rgba(0,0,0,.45);
+z-index: 20;
+display: none;
+
+/*display: flex;
+*/-ms-align-items: center;
+align-items: center;
+justify-content: center;
+
+}
+
+.ba-modal-content {
+width: 80vw;
+height: 80vh;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgba(255,255,255, 0.9);
+border-radius: 10px;
+padding: 15px;
+border:solid 3px $darkBlue;
+
+}
+.ba-modal-content-wrapper{
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+.ba-modal-close {
+	position: absolute;
+	height: 25px;
+	width: 25px;
+	background-color: #fff;
+	border-radius: 50%;
+	border: 1px solid #1e1e1e;
+	top: 12.5px;
+	color:black;
+	right: 12.5px;
+	display: flex;
+	font-family: sans-serif;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+}
+.ba-modal-open {
+	display: flex;
+}
+.ba-modal__image {
+	max-width: 100%;
+	max-height: 70vh;
+	object-fit: contain;
+}
+
+.ba-modal-is-open {
+	overflow: hidden;
+}
 
 .active{
 		transform: translateX(0px);
 }
+.animate{
+	animation-name: hide;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+}
+
+
+
 //keyframes
 @keyframes title {
 	0%{
@@ -409,7 +534,7 @@ div img {
 		transition: 2s;
 	}
 	100%{
-		transform:rotate(0deg);
+		transform:rotate(0deg) scale(0.8);
 		transition: 2s;
 	}
 }
