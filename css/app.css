@@ -925,7 +925,11 @@ form {
     .ba-col-3 {
       width: 50%; }
       .ba-col-3 .card {
+<<<<<<< HEAD
         min-height: 40vh !important; } }
+=======
+        min-height: 33vh !important; } }
+>>>>>>> 33525cdca45c0a3e68b4d8d13d2d2cc370ffc3ba
 
 .ba-col-4 {
   width: 33.33333%; }
