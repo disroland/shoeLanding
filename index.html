@@ -12,21 +12,21 @@
 </head>
 <body>
 
-	<header>
+	<header id='header'>
 		<div class="header-bg1">
 			<div class="header-bg2">
 				<div class="header-top">
-					<div class="logo wow slideInLeft">
+					<div class="logo">
 						<img src="img/nike.png" alt="nike_logo">
 					</div>
 					<nav>
 						<div class="nav-menu">
-							<ul class="menu">
-								<li class="menu-item">About</li>
-								<li class="menu-item">Gallery</li>
-								<li class="menu-item">Shop</li>
-								<li class="menu-item">Contacts</li>
-							</ul>
+							<div class="menu">
+								<a class="menu-item" href="#header">About</a>
+								<a class="menu-item" href="#slider">Slides</a>
+								<a class="menu-item" href="#gallery">Gallery</a>
+								<a class="menu-item" href="#contacts">Contacts</a>
+							</div>
 						</div>
 						<div class="nav-button">
 							<span></span>
@@ -40,13 +40,13 @@
 
 			<div class="header-content">
 				<div class="header-info">
-					<h1 class="header-title wow slideInDown">
+					<h1 class="header-title">
 						Awesome <br>
 						NIKE shoes!
 					</h1>
 					<div class="buttons">
-						<a href="#" class="h-btn explore wow slideInLeft"> explore</a>
-						<a href="#" class="h-btn add wow slideInRight"> add to cart</a>
+						<a href="#" class="h-btn explore wow slideInLeft" data-wow-delay='.4s'> explore</a>
+						<a href="#" class="h-btn add wow slideInRight" data-wow-delay='.4s'> add to cart</a>
 					</div>
 				</div>
 				<div class="header-picture">
@@ -55,7 +55,7 @@
 			</div>
 		</div>
 	</header>
-	<section class="section1">
+	<section class="section1" id='slider'>
 		<div class="bg-wrap wow">
 			<!-- <svg 
 			xmlns="http://www.w3.org/2000/svg"
@@ -105,14 +105,14 @@
 	</div>
 </section>
 
-<section class="gallery">
+<section class="gallery" id='gallery'>
 	<div class="gallery-title">
 		<h2>gallery</h2>
 	</div>
-	<div class="gallery-content">
+	<div class="gallery-content wow fadeInLeft">
 		<div class="ba-row">
 			<div class="ba-col-3 ba-col-sm-6">
-				<div class="card">
+				<div class="card wow fadeInDown" data-wow-delay='0.6s'>
 					<div class="pict">
 						<img src="img/shoe1.png" alt="nike">
 					</div>
@@ -134,7 +134,7 @@
 			</div>
 
 			<div class="ba-col-3 ba-col-sm-6">
-				<div class="card">
+				<div class="card wow fadeInDown" data-wow-delay='0.6s'>
 					<div class="pict">
 						<img src="img/shoe2.png" alt="nike">
 					</div>
@@ -156,7 +156,7 @@
 			</div>
 
 			<div class="ba-col-3 ba-col-sm-6">
-				<div class="card">
+				<div class="card wow fadeInDown" data-wow-delay='0.6s'>
 					<div class="pict">
 						<img src="img/shoe3.png" alt="nike">
 					</div>
@@ -178,7 +178,7 @@
 			</div>
 
 			<div class="ba-col-3 ba-col-sm-6">
-				<div class="card">
+				<div class="card wow fadeInDown" data-wow-delay='0.6s'>
 					<div class="pict">
 						<img src="img/shoe4.png" alt="nike">
 					</div>
@@ -202,7 +202,7 @@
 
 
 			<div class="ba-col-3 ba-col-sm-6">
-				<div class="card">
+				<div class="card wow fadeInUp" data-wow-delay='0.8'>
 					<div class="pict">
 						<img src="img/shoe5.png" alt="nike">
 					</div>
@@ -224,7 +224,7 @@
 			</div>
 
 			<div class="ba-col-3 ba-col-sm-6">
-				<div class="card">
+				<div class="card wow fadeInUp" data-wow-delay='0.8'>
 					<div class="pict">
 						<img src="img/shoe6.png" alt="nike">
 					</div>
@@ -246,7 +246,7 @@
 			</div>
 
 			<div class="ba-col-3 ba-col-sm-6">
-				<div class="card">
+				<div class="card wow fadeInUp" data-wow-delay='0.8'>
 					<div class="pict">
 						<img src="img/shoe7.png" alt="nike">
 					</div>
@@ -268,7 +268,7 @@
 			</div>
 
 			<div class="ba-col-3 ba-col-sm-6">
-				<div class="card">
+				<div class="card wow fadeInUp" data-wow-delay='0.8'>
 					<div class="pict">
 						<img src="img/shoe8.png" alt="nike">
 					</div>
@@ -294,14 +294,31 @@
 </section>
 
 
-<footer>
+<footer id='contacts'>
+	<div class="contact-wrap">
 	<div class='contact-info'>
 		<p>Phone: <span>000-000-00-00</span></p>
 		<p>Address: <span>Somewhere in neverwhere )</span></p>
 		<p>Working hours: <span>24/7</span></p>
-
 	</div>
-	<div class="map"></div>
+	<form action="#" method="post">
+		<lable class="field name wow fadeInLeft" data-wow-delay=".4s">
+			<input type="text" name="Name" placeholder="Username">
+		</lable>
+		<label class="field email  wow fadeInLeft"  data-wow-delay=".6s">
+			<input type="text" name="Email" placeholder="Email">
+		</label>
+		<label class="field message  wow fadeInLeft"  data-wow-delay=".8s">
+			<textarea name="Message" rows="6" placeholder="Text message"></textarea>
+		</label>
+		<label>
+		<button type="submit" name="Button" class="form-button wow fadeInLeft"  data-wow-delay="1s">Send</button> 
+		</label>
+	</form>
+	</div>
+	<div class="map-wrap wow fadeInRight" data-wow-delay=".5s">
+		<div class="map"></div>
+	</div>
 </footer>
 
 
@@ -318,8 +335,12 @@
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js" defer></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js' asynk defer></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
-<script src='js/app.js' defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI7k2hzPdURepCYA6-frf1sjrduBbV8WY&callback=initMap"
+></script>
+
+<script src='js/app.js' asynk defer></script>
+
 </body>
 </html>

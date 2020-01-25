@@ -130,13 +130,14 @@ button {
   justify-content: space-between;
   padding: 0;
   list-style: none; }
-  .menu li {
+  .menu a {
     padding-left: 20px;
     font-size: 30px;
     color: white;
     text-shadow: transparent 1px 1px 3px;
-    transition: .4s; }
-    .menu li:hover {
+    transition: .4s;
+    text-decoration: none; }
+    .menu a:hover {
       cursor: pointer;
       text-shadow: black 1px 1px 3px;
       color: skyblue; }
@@ -262,7 +263,7 @@ button {
   justify-content: center;
   align-items: center;
   padding-top: 20%;
-  max-height: 80%; }
+  max-height: 100%; }
   .s2-content img {
     width: 90%; }
   .s2-content h2 {
@@ -317,11 +318,15 @@ button {
   height: 100%;
   width: 90%;
   border-radius: 15px;
-  padding: 10px; }
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .card {
   max-width: 100%;
   min-height: 50vh;
+  height: 100%;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -344,15 +349,113 @@ button {
     .card .pict img {
       max-width: 100%; }
 
+.size {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
 footer {
-  margin: 2vw;
-  width: 96vw;
+  margin: 2%;
+  width: 96%;
   height: 100%;
   background-color: #fff;
   min-height: 10vh;
   border: solid #0089a0 10px;
   border-radius: 15px;
-  padding: 10px 20px; }
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+  @media (orientation: portrait) {
+    footer {
+      flex-direction: column; } }
+
+.contact-wrap {
+  height: 100%;
+  width: 49%;
+  padding: 10px; }
+
+.map-wrap {
+  width: 49%;
+  min-height: 50vh;
+  border: solid 1px #0089a0; }
+
+.map {
+  width: 100%;
+  min-height: 50vh; }
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column; }
+
+.contact h3 {
+  margin: 0 0 45px;
+  text-align: center;
+  color: #48BF72;
+  font-size: 26px;
+  font-family: "Big John", sans-serif;
+  font-weight: 400;
+  line-height: 25px; }
+
+.contact {
+  width: 740px;
+  margin: 0 auto;
+  text-align: center; }
+
+.field {
+  position: relative;
+  display: block;
+  background-color: #0089a0;
+  padding: 2px 2px 2px 50px;
+  border-radius: 2px;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  border-radius: 7px; }
+
+.field:after {
+  left: 50px;
+  top: 18px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-left-color: #0089a0;
+  border-width: 6px;
+  z-index: 2; }
+
+.field > * {
+  width: 100%;
+  display: block;
+  border: none;
+  background: white;
+  outline: none;
+  min-height: 46px;
+  padding: 0 23px 0 23px;
+  line-height: 46px;
+  font-weight: 700;
+  color: #0089a0; }
+
+.field > textarea {
+  line-height: 1.3;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  resize: vertical; }
+
+.field.name {
+  background-image: url(../img/user.svg);
+  background-position: 14px 14px; }
+
+.field.email {
+  background-image: url(../img/mail.svg);
+  background-position: 14px 17px; }
+
+.field.message {
+  background-image: url(../img/crayon.svg);
+  background-position: 14px 17px; }
 
 .ba-modal {
   position: fixed;
@@ -384,7 +487,16 @@ footer {
 .ba-modal-content-wrapper {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; }
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  @media (orientation: portrait) {
+    .ba-modal-content-wrapper {
+      flex-direction: column;
+      align-items: center;
+      max-height: 100%;
+      justify-content: space-between; } }
 
 .ba-modal-close {
   position: absolute;
@@ -406,9 +518,17 @@ footer {
   display: flex; }
 
 .ba-modal__image {
-  max-width: 100%;
+  max-width: 80%;
   max-height: 70vh;
   object-fit: contain; }
+
+.modalTxt {
+  align-self: flex-start;
+  animation-duration: .6s;
+  animation-delay: .5s; }
+  @media (orientation: portrait) {
+    .modalTxt {
+      align-self: flex-end; } }
 
 .ba-modal-is-open {
   overflow: hidden; }

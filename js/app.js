@@ -10,7 +10,10 @@
 // 	mnu.classList.toggle('active');
 // }
 
-new WOW().init();   
+new WOW({
+live:true
+}
+).init();   
 
 //slider
 $(document).ready(function(){
@@ -74,8 +77,22 @@ $('.card img').on('click', function(e)
 {
   let $imgSrc = $(this).attr('src');
   let $modalImage = $('<img>');
+  let modalTXT = document.createElement('div');
+  let $modalText = $(this).closest('div')[0].nextElementSibling.innerHTML;
+  console.log($modalText);
+  modalTXT.innerHTML=$modalText;
+  modalTXT.style.color = 'skyblue';
+  modalTXT.style.fontSize = '20px';
+  modalTXT.style.textTransform = 'uppercase';
+  modalTXT.style.textShadow = 'black 1px 1px 2px';
+  modalTXT.classList.add('modalTxt');
+  modalTXT.classList.add('animated');
+  modalTXT.classList.add('rotateInDownRight');
+  $modalImage[0].classList.add('animated');
+  $modalImage[0].classList.add('fadeInLeft');
   $modalImage.attr('src', $imgSrc).addClass('ba-modal__image');
   $('.ba-modal-content-wrapper').append($modalImage);
+  $('.ba-modal-content-wrapper').append(modalTXT);
   openModal();
 }
 )
@@ -123,3 +140,119 @@ $('.header-picture img').on('mousemove', function(){
 	$(this).removeClass('animate');
 })
 
+
+//form
+$(document).ready(function(){
+	$('form').on('submit', function(e){
+		e.preventDefault();
+		firstArea();
+		secondArea();
+		textArea();
+
+	});
+
+	function clearSpan(curField){
+		console.log('curField' , curField);
+		let $span = $(curField).next('span');
+		console.log($span);
+		for (let i=0; i<$span.length;i++) {$span.remove();}
+	}
+
+function firstArea(){
+let txt1 = document.querySelector('.name input');
+let txt2 = txt1.value.toLowerCase();
+let y = $(txt1).parent()[0];
+console.log (y);
+
+if (txt2 == txt1.value && txt1.value != '') {console.log(txt1.value, txt2);
+	clearSpan(y);
+}
+else { 
+console.log('You entered wrong letters!!');
+let sp1 = document.createElement('span');
+sp1.innerText = 'You entered wrong letters!!';
+sp1.style.color = 'red';
+sp1.style.margin="0";
+sp1.style.position="relative";
+sp1.style.top="-20px";
+
+
+clearSpan(y);
+$(txt1).parent().after(sp1);
+}
+}
+function secondArea(){
+let mail1=document.querySelector('.email input');
+let x = $(mail1).parent()[0];
+console.log (x);
+if (mail1.value.indexOf('@')>=0 && mail1.value != '') 
+	{console.log('OK');
+	clearSpan(x);
+}
+else { 
+console.log('You entered wrong mail');
+let sp2 = document.createElement('span');
+sp2.innerText = 'You entered wrong mail!!';
+sp2.style.color = 'red';
+sp2.style.position="relative";
+sp2.style.top="-20px";
+
+clearSpan(x);
+$(mail1).parent().after(sp2);
+}
+}
+
+function textArea(){
+	let txtArea=document.querySelector('.message textarea');
+	let z = $(txtArea).parent()[0];
+	if (txtArea.value.length > 20){
+		console.log('its enough');
+		clearSpan(z);
+	} else 
+	{ 
+console.log('Its not enough');
+let sp2 = document.createElement('span');
+sp2.innerText = 'Its not enough';
+sp2.style.color = 'red';
+sp2.style.position="relative";
+sp2.style.top="-20px";
+
+clearSpan(z);
+$(txtArea).parent().after(sp2);
+}
+}
+
+ 
+})
+
+// map module
+
+let map;
+let mapBlock = document.querySelector('.map');
+let mCenter = {lat: 40.6917159, lng: -73.9158478,};
+
+map = new google.maps.Map(mapBlock, {
+	center:mCenter,
+	zoom:12,
+	disableDefaultUI:true
+});
+
+let marker = new google.maps.Marker({
+	position:mCenter,
+	map:map,
+	icon:'img/nike.png'
+});
+
+
+//scroll
+
+let lnk = $('.menu-item');
+    $('.menu').on("click", 'a', function (event) {
+        event.preventDefault();
+        console.log(this);
+        let id  = $(this).attr('href');
+        console.log(id);
+         let top = $(id).offset().top;
+         console.log(top);
+        $('html, body').animate({scrollTop: (top)}, 2000);
+    });
