@@ -173,7 +173,7 @@ button {
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding-top: 10%; }
+  padding-top: 13%; }
   .header-info h1 {
     color: white;
     text-align: center;
@@ -187,7 +187,7 @@ button {
       animation-iteration-count: 1; }
     @media screen and (max-width: 901px) {
       .header-info h1 {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         font-size: 2rem; } }
   .header-info .h-btn {
     display: inline-block;
@@ -233,12 +233,12 @@ button {
 .section1 {
   width: 100%;
   min-height: 150vh;
-  height: 120%;
+  height: 100%;
   background-image: url(../img/shape1.png);
   background-size: cover;
   background-position: cover;
   background-repeat: no-repeat;
-  margin-top: -260px;
+  margin-top: -270px;
   overflow: hidden;
   position: relative;
   z-index: 5; }
@@ -265,6 +265,7 @@ button {
 
 .s2-content {
   position: relative;
+  top: 5%;
   z-index: 16;
   display: flex;
   flex-direction: column;
