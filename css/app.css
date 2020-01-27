@@ -312,7 +312,12 @@ body {
   padding: 0;
   max-width: 1920px;
   overflow-x: hidden;
-  font-family: 'Josefin Sans', sans-serif; }
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #0089a0;
+  background-image: url(../img/bg_scratches.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
 
 header {
   width: 100%;
@@ -533,19 +538,22 @@ button {
 
 .section1 {
   width: 100%;
-  min-height: 100%;
-  height: 100%;
+  min-height: 150vh;
+  height: 120%;
   background-image: url(../img/shape1.png);
   background-size: cover;
   background-position: cover;
   background-repeat: no-repeat;
   margin-top: -240px;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
   z-index: 5; }
   @media screen and (min-width: 1768px) {
     .section1 {
       margin-top: -300px; } }
+  @media (orientation: portrait) {
+    .section1 {
+      min-height: 90vh; } }
 
 .bg-wrap {
   background-image: url(../img/shape2.png);
@@ -640,8 +648,7 @@ button {
   justify-content: space-between;
   border: solid 2px #0089a0;
   border-radius: 10px 30px;
-  padding: 10px 5px;
-  margin-bottom: 2%; }
+  padding: 10px 5px; }
   .card p {
     font-size: 1.4rem;
     color: #0089a0;
@@ -651,7 +658,8 @@ button {
     width: 100%;
     object-fit: cover;
     justify-self: flex-start;
-    align-self: flex-start; }
+    align-self: flex-start;
+    margin: auto; }
     .card .pict img {
       max-width: 100%; }
 
@@ -664,7 +672,7 @@ footer {
   margin: 2%;
   width: 96%;
   height: 100%;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   min-height: 10vh;
   border: solid #0089a0 10px;
   border-radius: 15px;
@@ -681,15 +689,25 @@ footer {
   height: 100%;
   width: 49%;
   padding: 10px; }
+  @media (orientation: portrait) {
+    .contact-wrap {
+      width: 90%; } }
 
 .map-wrap {
   width: 49%;
   min-height: 50vh;
-  border: solid 1px #0089a0; }
+  border: solid 3px #0089a0;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0; }
+  @media (orientation: portrait) {
+    .map-wrap {
+      width: 90%; } }
 
 .map {
-  width: 100%;
-  min-height: 50vh; }
+  width: 105%;
+  height: 52vh; }
 
 /* Form */
 form {
@@ -920,16 +938,11 @@ form {
   width: 16.66667%; }
 
 .ba-col-3 {
-  width: 25%; }
+  width: 25%;
+  margin-bottom: 1rem; }
   @media (orientation: portrait) {
     .ba-col-3 {
-      width: 50%; }
-      .ba-col-3 .card {
-<<<<<<< HEAD
-        min-height: 40vh !important; } }
-=======
-        min-height: 33vh !important; } }
->>>>>>> 33525cdca45c0a3e68b4d8d13d2d2cc370ffc3ba
+      width: 50%; } }
 
 .ba-col-4 {
   width: 33.33333%; }

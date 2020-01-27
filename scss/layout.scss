@@ -32,18 +32,12 @@
 
 .ba-col-3 {
   width: 25%;
+  margin-bottom: 1rem;
   @media (orientation: portrait){
    width: 50%;
-   .card{
-<<<<<<< HEAD
-    min-height: 40vh !important;
-=======
-    min-height: 33vh !important;
->>>>>>> 33525cdca45c0a3e68b4d8d13d2d2cc370ffc3ba
-   } 
-  }
-   }
-
+ }
+}
+   
 .ba-col-4 {
   width: 33.33333%; }
 
@@ -105,4 +99,5 @@
   width: 1px;
   padding: 0;
   margin: 0;
-  overflow: hidden; }
+  overflow: hidden;
+}
