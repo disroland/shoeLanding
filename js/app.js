@@ -49,16 +49,17 @@ $(document).ready(function(){
 		nxt();
 		prev();
 
-	document.querySelector('.cont').addEventListener('mouseup', function(){
-		$('.left').on('click', function(){
+	// document.querySelector('.cont').addEventListener('mouseup', function(){
+		$('.cont').on('click', '.left', function(){
+			debugger;
 			if (i>0) {i=i-1;
 			sld();} else {i=im.length-1; sld();}
 		});
-		$('.right').on('click', function(){
+		$('.cont').on('click', '.right', function(){
 			if (i<im.length-1) {i=i+1;
 			sld();} else {i=0; sld();}
 		});
-	})
+	// })
 
 	//menu
 	let mnubtn = document.querySelector('.nav-button');
