@@ -51,7 +51,6 @@ $(document).ready(function(){
 
 	// document.querySelector('.cont').addEventListener('mouseup', function(){
 		$('.cont').on('click', '.left', function(){
-			debugger;
 			if (i>0) {i=i-1;
 			sld();} else {i=im.length-1; sld();}
 		});
@@ -144,12 +143,15 @@ $('.header-picture img').on('mousemove', function(){
 
 //form
 $(document).ready(function(){
+	let f1 = false;
+	let f2 = false;
+	let f3 = false;
 	$('form').on('submit', function(e){
 		e.preventDefault();
 		firstArea();
 		secondArea();
 		textArea();
-
+		if (f1 && f2 && f3){alert('Form was correct')};
 	});
 
 	function clearSpan(curField){
@@ -167,6 +169,7 @@ console.log (y);
 
 if (txt2 == txt1.value && txt1.value != '') {console.log(txt1.value, txt2);
 	clearSpan(y);
+	f1 = true;
 }
 else { 
 console.log('You entered wrong letters!!');
@@ -189,6 +192,7 @@ console.log (x);
 if (mail1.value.indexOf('@')>=0 && mail1.value != '') 
 	{console.log('OK');
 	clearSpan(x);
+	f2 = true;
 }
 else { 
 console.log('You entered wrong mail');
@@ -209,6 +213,7 @@ function textArea(){
 	if (txtArea.value.length > 20){
 		console.log('its enough');
 		clearSpan(z);
+		f3 = true;
 	} else 
 	{ 
 console.log('Its not enough');

@@ -49,7 +49,7 @@ nav {
 
 .wrap {
   position: relative;
-  width: 640px;
+  width: 600px;
   min-height: 480px;
   perspective: 1000px; }
 
@@ -69,17 +69,19 @@ nav {
   height: 50px;
   line-height: 50px;
   margin: 0 auto 40px auto;
-  justify-content: space-between; }
+  justify-content: space-around; }
 
 button {
-  width: 45%;
-  height: 100%;
+  width: 50px;
+  height: 50px;
   background-color: #00b2bb;
-  border-radius: 10px;
+  border-radius: 50%;
   text-transform: uppercase;
   color: white;
-  font-size: 1.2rem;
-  transition: .4s; }
+  font-size: 2.5rem;
+  line-height: 50px;
+  transition: .4s;
+  box-shadow: white 1px 1px 3px; }
   button:hover {
     background-color: #00696f; }
 
@@ -105,7 +107,7 @@ button {
   opacity: .5;
   top: 0;
   left: 0;
-  transform: translateX(-200px);
+  transform: translateX(-140px);
   top: 80px;
   z-index: 5;
   width: 100px;
@@ -117,7 +119,7 @@ button {
   top: 0;
   top: 80px;
   left: 0;
-  transform: translateX(740px);
+  transform: translateX(680px);
   z-index: 5;
   width: 100px;
   transition: .3s; }
@@ -487,9 +489,12 @@ form {
 .form-button {
   display: flex;
   justify-content: center;
+  border-radius: 4px;
+  font-size: 1.3rem;
   align-items: center;
-  height: 1.7rem;
-  line-height: 1.7rem; }
+  height: 2rem;
+  width: 40%;
+  line-height: 2rem; }
 
 .ba-modal {
   position: fixed;
