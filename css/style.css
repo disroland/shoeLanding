@@ -19,7 +19,7 @@ body {
 header {
   width: 100%;
   margin: 0%;
-  min-height: 100vh;
+  min-height: 110vh;
   overflow: auto;
   padding: 50px 50px;
   background-color: #00b2bb;
@@ -147,7 +147,7 @@ nav {
     padding-left: 20px;
     font-size: 30px;
     color: white;
-    text-shadow: transparent 1px 1px 3px;
+    text-shadow: #0089a0 1px 1px 3px;
     transition: .4s;
     text-decoration: none; }
     .menu a:hover {
@@ -256,7 +256,8 @@ nav {
       margin-top: -300px; } }
   @media (orientation: portrait) {
     .section1 {
-      min-height: 90vh; } }
+      min-height: 90vh;
+      margin-top: -300px; } }
 
 .bg-wrap {
   background-image: url(../img/shape2.png);
@@ -584,6 +585,20 @@ form {
   animation-name: hide;
   animation-duration: 3s;
   animation-iteration-count: 1; }
+
+.header-fix {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 15;
+  opacity: .9;
+  color: black;
+  text-shadow: black 1px 1px 3px;
+  margin: 0 auto;
+  background-color: transparent;
+  color: #0089a0;
+  z-index: 75;
+  padding: 5px; }
 
 @keyframes title {
   0% {

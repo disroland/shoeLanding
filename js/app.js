@@ -262,3 +262,19 @@ let lnk = $('.menu-item');
          console.log(top);
         $('html, body').animate({scrollTop: (top)}, 2000);
     });
+
+    // nav menu
+
+    window.addEventListener('scroll', function (){
+    	let header = document.querySelector('.header-top nav');
+    	let openMenu = document.querySelector('.nav-menu');
+      console.log(header);
+    	if (window.pageYOffset >= header.clientHeight) {
+    		openMenu.classList.remove('active');
+    		header.classList.add('header-fix')
+    	} else {
+    		header.classList.remove('header-fix')
+
+    	}
+    }
+    )
